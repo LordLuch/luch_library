@@ -1,0 +1,182 @@
+:root {
+  --eerie_black: #261C1A;
+  --grullo: #AC8F83;
+  --quick_silver: #ADA0A2;
+  --pastel_gray: #D5CCC7;
+
+  --font_ultra_sm: 14px;
+  --font_default: 16px;
+  --font_sm: 18px;
+  --font_md: 20px;
+  --font_lg: 26px;
+}
+
+* {
+  font-family: "Inter", sans-serif;
+  font-size: var(--font_default);
+  text-decoration: none;
+  border-width: 0;
+  outline: none;
+  margin: 0;
+}
+
+body {
+  background-color: var(--grullo);
+  height: 100vh;
+  width: 100vw;
+}
+
+nav {
+  background-color: var(--eerie_black);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 80px;
+  width: 100%;
+  gap: 66px;
+}
+
+main {
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  display: flex;
+  gap: 10px;
+}
+main > p {
+  width: 490px;
+  text-align: justify;
+}
+
+footer {
+  background-color: var(--eerie_black);
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  display: flex;
+  height: 100px;
+  width: 100%;
+  bottom: 0;
+}
+footer > p {
+  font-size: var(--font_ultra_sm);
+  margin-left: 10px;
+}
+footer > .footer_icons {
+  display: flex;
+  margin-right: 10px;
+  gap: 10px;
+}
+
+p {
+  color: white;
+}
+
+a {
+  color: var(--quick_silver);
+}
+a:hover {
+  filter: brightness(.90);
+}
+
+svg {
+  fill: white;
+}
+
+img {
+  border-radius: 16px;
+}
+main > img {
+  cursor: zoom-in;
+}
+
+.button_redirection {
+  display: inline-flex;
+  height: 75px;
+  width: 220px;
+}
+.button_redirection > button {
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+  cursor: pointer;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  gap: 5px;
+}
+.button_redirection > button > svg {
+  width: 24px;
+}
+.button_redirection > button > p {
+  color: black;
+}
+
+.bright_redirect {
+  color: white;
+}
+
+dialog {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 99999;  
+}
+dialog > .modal {
+  background-color: black;
+  position: absolute;
+  z-index: 9999;
+  opacity: 25%;
+  height: 100vh;
+  width: 100vw;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+dialog > .dialog_image {
+  transform: translate(-50%,-50%);
+  position: absolute;
+  z-index: 99999;
+  left: 50%;
+  top: 50%;
+}
+dialog > form {
+  height: 100%;
+  width: 100%;
+}
+dialog > form > button {
+  background-color: transparent;
+  position: absolute;
+  z-index: 99999;
+  height: 100%;
+  width: 100%;
+  left: 300px;
+  top: -260px;
+}
+dialog > form > button:hover {
+  cursor: pointer;
+}
+dialog > form > button > svg {
+  stroke: red;
+  width: 32px;
+}
+
+/* 
+@media (min-width: 640px) {
+  
+}
+@media (min-width: 768px) {
+  
+}
+@media (min-width: 1024px) {
+  
+}
+@media (min-width: 1280px) {
+  
+}
+@media (min-width: 1536px) {
+  
+} 
+*/
