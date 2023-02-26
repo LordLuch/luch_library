@@ -52,6 +52,7 @@ main > p {
 footer {
   background-color: var(--eerie_black);
   justify-content: space-between;
+  flex-direction: column;
   align-items: center;
   position: absolute;
   display: flex;
@@ -61,11 +62,11 @@ footer {
 }
 footer > p {
   font-size: var(--font_ultra_sm);
-  margin-left: 10px;
+  margin-top: 20px;
 }
 footer > .footer_icons {
   display: flex;
-  margin-right: 10px;
+  margin-bottom: 20px;
   gap: 10px;
 }
 
@@ -89,6 +90,9 @@ img {
 }
 main > img {
   cursor: zoom-in;
+}
+main > img:hover {
+  opacity: 85%;
 }
 
 .button_redirection {
@@ -163,10 +167,23 @@ dialog > form > button > svg {
   width: 32px;
 }
 
-/* 
 @media (min-width: 640px) {
-  
+  footer {
+    flex-direction: row;
+  }
+  footer > p {
+    margin-left: 10px;
+    margin-top: 0;
+  }
+  footer > .footer_icons {
+    margin-right: 10px;
+    margin-bottom: 0;
+  }
+
+
+
 }
+/* 
 @media (min-width: 768px) {
   
 }
