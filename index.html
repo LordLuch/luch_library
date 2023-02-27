@@ -17,42 +17,25 @@
   </head>
   <body>
     <nav>
-      <a href="/" class="bright_redirect">Início</a>
+      <a href="/" class="white">Início</a>
       <a href="/books/">Livros</a>
     </nav>
     <main>
       <img 
         srcset="./images/bookstore_medium.jpg 1280w, ./images/bookstore_small.jpg 640w" 
-        sizes="(min-width: 1280px) 350px, 640px"
+        sizes="
+          (max-width: 640px) 300px, 
+          (max-width: 768px) 350px,
+          (max-width: 1024px) 380px,
+          (max-width: 1280px) 400px,
+          (max-width: 1536px) 460px,
+          250px
+        "
         src="./images/bookstore_medium.jpg"
         alt="Imagem de uma biblioteca"
-        id="bookstore_image"
+        class="img_with_dialog"
+        onclick="openDialog()"
       />
-      <dialog id="bookstore_dialog">
-        <div class="modal"></div>
-        <div class="dialog_image">
-          <img
-            srcset="./images/bookstore_medium.jpg 1280w, ./images/bookstore_small.jpg 640w" 
-            sizes="(min-width: 1280px) 640px, (min-width: 1536px) 1280px, 720px"
-            src="./images/bookstore_medium.jpg"
-            alt="Imagem de uma biblioteca"
-          />
-          <a href="/images/bookstore_medium.jpg" target="_blank" rel="nofollow" class="bright_redirect">
-            Abrir original
-          </a>
-        </div>
-        <form method="dialog">
-          <button>
-            <svg 
-              xmlns="http://www.w3.org/2000/svg" fill="none" 
-              viewBox="0 0 24 24" stroke-width="1.5" 
-              stroke="currentColor"
-            >
-              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-            </svg>            
-          </button>
-        </form>
-      </dialog>
       <p>
         Seja bem-vindo à minha biblioteca, aqui eu reúno os livros que eu pretendo ler, e caso algum se interesse por algum pode lê-lo.
       </p>
@@ -84,5 +67,37 @@
         </a>
       </div>
     </footer>
+    <dialog id="dialog">
+      <div class="modal"></div>
+      <div class="dialog_image">
+        <img
+          srcset="./images/bookstore_medium.jpg 1280w, ./images/bookstore_small.jpg 640w" 
+          sizes="
+            (max-width: 640px) 400px, 
+            (max-width: 768px) 450px,
+            (max-width: 1024px) 480px,
+            (max-width: 1280px) 500px,
+            (max-width: 1536px) 560px,
+            250px
+          "
+          src="./images/bookstore_medium.jpg"
+          alt="Imagem de uma biblioteca"
+        />
+        <a href="/images/bookstore_medium.jpg" target="_blank" rel="nofollow" class="white">
+          Abrir original
+        </a>
+      </div>
+      <form method="dialog">
+        <button>
+          <svg 
+            xmlns="http://www.w3.org/2000/svg" fill="none" 
+            viewBox="0 0 24 24" stroke-width="1.5" 
+            stroke="currentColor"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>            
+        </button>
+      </form>
+    </dialog>
   </body>
 </html>

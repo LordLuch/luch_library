@@ -1,0 +1,125 @@
+@import "./globals.css";
+
+main {
+  justify-content: normal;
+  margin-bottom: 20px;
+}
+
+.filter {
+  background-color: var(--eerie_black);
+  border-radius: 0 0 16px 16px;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  height: 62px;
+  width: 50%;
+}
+.filter > button {
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  gap: 5px;
+}
+.filter > button:hover {
+  opacity: 80%;
+}
+
+.filter > button > svg {
+  stroke: white;
+  width: 25px;
+}
+.filter > button > p {
+  font-size: var(--font_sm);
+}
+
+.filter_panel {
+  background-color: var(--eerie_black);
+  border-radius: 0 0 16px 16px;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  padding-top: 10px;
+  display: flex;
+  height: 250px;
+  width: 300px;
+  opacity: 90%;
+  top: 140px;
+}
+
+.categories {
+  flex-direction: column;
+  align-items: center;
+  margin-top: 8px;
+  display: flex;
+  gap: 5px;
+}
+.category {
+  cursor: pointer;
+  color: var(--quick_silver);
+
+  -webkit-transition: color 0.5s ease-in-out;
+  -moz-transition: color 0.5s ease-in-out;
+  transition: color 0.5s ease-in-out;
+}
+.category:hover {
+  color: white;
+}
+
+.books {
+  grid-template-columns: repeat(2, 150px);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  display: grid;
+}
+.book > a {
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+.book_title {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .books {
+    grid-template-columns: repeat(3, 160px);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    display: grid;
+  }
+}
+@media (min-width: 1024px) {
+  .books {
+    grid-template-columns: repeat(3, 200px);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    display: grid;
+  }
+}
+@media (min-width: 1280px) {
+  .books {
+    grid-template-columns: repeat(4, 210px);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    display: grid;
+  }
+}
+@media (min-width: 1536px) {
+  .books {
+    grid-template-columns: repeat(5, 210px);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    display: grid;
+  }
+}
+
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .category {
+    -webkit-transition: none;
+    -moz-transition: none;
+    animation: none;
+  }
+} 
