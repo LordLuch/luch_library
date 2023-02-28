@@ -9,7 +9,7 @@
 .book_data > table {
   background-color: var(--eerie_black);
   border-radius: 0 16px 16px 0;
-  height: 285px;
+  height: 100%;
   width: 120px;
 }
 .book_data > table {
@@ -49,7 +49,6 @@ iframe {
     height: 480px;
   }
   .book_data > table {
-    height: 285px;
     width: 360px;
   }
   .book_data > table > tbody > tr > th {

@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="../images/favicons/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="../styles/globals.css" />
-    <link rel="stylesheet" href="../styles/books.css" />
+    <link rel="shortcut icon" href="/images/favicons/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/styles/globals.css" />
+    <link rel="stylesheet" href="/styles/books.css" />
 
-    <script src="../scripts/books/filter.js"></script>
+    <script src="/scripts/books/filter.js"></script>
     
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -23,39 +23,82 @@
     </nav>
     <main>
       <div class="filter">
-        <button onclick="openFilter()">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 13.5V3.75m0 9.75a1.5 1.5 0 010 3m0-3a1.5 1.5 0 000 3m0 3.75V16.5m12-3V3.75m0 9.75a1.5 1.5 0 010 3m0-3a1.5 1.5 0 000 3m0 3.75V16.5m-6-9V3.75m0 3.75a1.5 1.5 0 010 3m0-3a1.5 1.5 0 000 3m0 9.75V10.5" />
-          </svg>          
-          <p>Filtrar</p>
-        </button>
+        <div class="filter_actions">
+          <button onclick="openFilter()">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 13.5V3.75m0 9.75a1.5 1.5 0 010 3m0-3a1.5 1.5 0 000 3m0 3.75V16.5m12-3V3.75m0 9.75a1.5 1.5 0 010 3m0-3a1.5 1.5 0 000 3m0 3.75V16.5m-6-9V3.75m0 3.75a1.5 1.5 0 010 3m0-3a1.5 1.5 0 000 3m0 9.75V10.5" />
+            </svg>          
+            <p>Filtrar</p>
+          </button>
+          <svg 
+            xmlns="http://www.w3.org/2000/svg" fill="none" 
+            viewBox="0 0 24 24" stroke-width="1.5" 
+            stroke="currentColor" class="trash_icon"
+            onclick="clearFilters()"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
+          </svg>
+        </div>
+        
         <div class="filter_panel" id="filter_panel" style="display: none">
-          <p>Categorias</p>
-          <div class="categories">
-            <p class="category" onclick="selectCategory('software_development')">Desenvolvimento de Software</p>
-          </div>
+          <p class="category_paragraph">Categorias</p>
+          <div class="categories"></div>
         </div>
       </div>
       <div class="books">
-        <div class="book" id="software_development software_engineering">
+        <div class="book software_development software_engineering">
           <a href="/books/book/software_engineering_a_professional_approach">
             <img
-              srcset="../images/books/software_engineering_a_professional_approach.png 314w"
-              sizes="
-                (max-width: 640px) 150px,
-                (max-width: 768px) 160px,
-                (max-width: 1024px) 180px,
-                (max-width: 1280px) 200px,
-                (max-width: 1536px) 210px,
-                150px
-              "
-              src="../images/books/software_engineering_a_professional_approach.png"
+              width="210"
+              height="270"
+              src="/images/books/software_engineering_a_professional_approach.png"
               alt="Capa do livro Engenharia de Software uma abordagem profissional"
             />
             <p class="book_title">
               Engenharia de Software
               <br/>
               Uma abordagem profissional
+            </p>
+          </a>
+        </div>
+        <div class="book software_development software_engineering">
+          <a href="/books/book/software_engineering_ian_sommerville">
+            <img
+              width="210"
+              height="270"
+              src="/images/books/software_engineering_ian_sommerville.jpg"
+              alt="Capa do livro Engenharia de Software por Ian Sommerville"
+            />
+            <p class="book_title">
+              Engenharia de Software
+              <br />
+              Ian Sommerville
+            </p>
+          </a>
+        </div>
+        <div class="book software_development digital_design">
+          <a href="/books/book/human_computer_interaction">
+            <img
+              width="210"
+              height="270"
+              src="/images/books/human_computer_interaction.png"
+              alt="Capa do livro Interação Humano Computador"
+            />
+            <p class="book_title">
+              Interação Humano Computador
+            </p>
+          </a>
+        </div>
+        <div class="book business">
+          <a href="/books/book/the_smart_investor">
+            <img
+              width="210"
+              height="270"
+              src="/images/books/the_smart_investor.png"
+              alt="Capa do livro O Investidor Inteligente"
+            />
+            <p class="book_title">
+              O Investidor Inteligente
             </p>
           </a>
         </div>

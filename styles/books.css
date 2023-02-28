@@ -15,21 +15,25 @@ main {
   height: 62px;
   width: 50%;
 }
-.filter > button {
+.filter > .filter_actions {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.filter > .filter_actions > button {
   background-color: transparent;
   cursor: pointer;
   display: flex;
   gap: 5px;
 }
-.filter > button:hover {
+.filter > .filter_actions > button:hover {
   opacity: 80%;
 }
-
-.filter > button > svg {
+.filter > .filter_actions > button > svg {
   stroke: white;
   width: 25px;
 }
-.filter > button > p {
+.filter > .filter_actions > button > p {
   font-size: var(--font_sm);
 }
 
@@ -39,12 +43,23 @@ main {
   flex-direction: column;
   align-items: center;
   position: absolute;
-  padding-top: 10px;
+  padding: 10px 10px 0 10px;
+  overflow-y: auto;
   display: flex;
   height: 250px;
-  width: 300px;
+  width: 220px;
   opacity: 90%;
-  top: 140px;
+  top: 142px;
+}
+
+.all_filters {
+  flex-direction: column;
+  display: flex;
+  gap: 3px;
+}
+
+.category_paragraph {
+  margin-bottom: 5px;
 }
 
 .categories {
@@ -55,8 +70,8 @@ main {
   gap: 5px;
 }
 .category {
-  cursor: pointer;
   color: var(--quick_silver);
+  cursor: pointer;
 
   -webkit-transition: color 0.5s ease-in-out;
   -moz-transition: color 0.5s ease-in-out;
@@ -72,6 +87,7 @@ main {
   grid-row-gap: 20px;
   display: grid;
 }
+
 .book > a {
   justify-content: center;
   flex-direction: column;
@@ -82,12 +98,20 @@ main {
   text-align: center;
 }
 
+@media (min-width: 640px) {
+  .filter_panel {
+    width: 250px;
+  }
+}
 @media (min-width: 768px) {
   .books {
     grid-template-columns: repeat(3, 160px);
     grid-column-gap: 30px;
     grid-row-gap: 30px;
     display: grid;
+  }
+  .filter_panel {
+    width: 350px;
   }
 }
 @media (min-width: 1024px) {

@@ -12,14 +12,25 @@
 }
 
 * {
+  scrollbar-color: var(--eerie_black) var(--grullo);
   font-family: "Inter", sans-serif;
-  font-size: var(--font_default);
+  font-size: var(--font_ultra_sm);
   box-sizing: border-box;
   text-decoration: none;
   border-width: 0;
   outline: none;
   padding: 0;
   margin: 0;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+}
+*::-webkit-scrollbar-track {
+  background-color: var(--grullo);
+}
+*::-webkit-scrollbar-thumb {
+  background-color: var(--eerie_black);
 }
 
 body {
@@ -180,7 +191,19 @@ dialog > form > button > svg {
   width: 32px;
 }
 
+.trash_icon {
+  cursor: pointer;
+  stroke: black;
+  width: 25px;
+}
+.trash_icon:hover {
+  opacity: 80%;
+}
+
 @media (min-width: 640px) {
+  * {
+    font-size: var(--font_default);
+  }
   footer {
     flex-direction: row;
     gap: 0;
