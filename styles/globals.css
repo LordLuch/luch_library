@@ -177,7 +177,7 @@ dialog > form > button {
   cursor: pointer;
   z-index: 99999;
   left: 100px;
-  top: -135px;
+  top: -185px;
 }
 dialog > form > button:hover {
   opacity: 70%;
