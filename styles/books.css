@@ -82,7 +82,7 @@ main {
 }
 
 .books {
-  grid-template-columns: repeat(2, 150px);
+  grid-template-columns: repeat(1, 250px);
   grid-column-gap: 20px;
   grid-row-gap: 20px;
   display: grid;
@@ -99,24 +99,24 @@ main {
 }
 
 @media (min-width: 640px) {
+  .books {
+    grid-template-columns: repeat(2, 250px);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    display: grid;
+  }
   .filter_panel {
     width: 250px;
   }
 }
 @media (min-width: 768px) {
-  .books {
-    grid-template-columns: repeat(3, 160px);
-    grid-column-gap: 30px;
-    grid-row-gap: 30px;
-    display: grid;
-  }
   .filter_panel {
     width: 350px;
   }
 }
 @media (min-width: 1024px) {
   .books {
-    grid-template-columns: repeat(3, 200px);
+    grid-template-columns: repeat(3, 250px);
     grid-column-gap: 20px;
     grid-row-gap: 20px;
     display: grid;
@@ -124,7 +124,7 @@ main {
 }
 @media (min-width: 1280px) {
   .books {
-    grid-template-columns: repeat(4, 210px);
+    grid-template-columns: repeat(4, 250px);
     grid-column-gap: 20px;
     grid-row-gap: 20px;
     display: grid;
@@ -132,7 +132,7 @@ main {
 }
 @media (min-width: 1536px) {
   .books {
-    grid-template-columns: repeat(5, 210px);
+    grid-template-columns: repeat(5, 250px);
     grid-column-gap: 20px;
     grid-row-gap: 20px;
     display: grid;
