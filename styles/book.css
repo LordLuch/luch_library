@@ -38,16 +38,8 @@
   display: flex;
   gap: 20px;
 }
-iframe {
-  width: 280px;
-  height: 480px;
-}
 
 @media (min-width: 768px) {
-  iframe {
-    width: 640px;
-    height: 480px;
-  }
   .book_data > table {
     width: 360px;
   }
