@@ -87,7 +87,10 @@ main {
   grid-row-gap: 20px;
   display: grid;
 }
-
+.book {
+  width: 210px;
+  height: 310px;
+}
 .book > a {
   justify-content: center;
   flex-direction: column;
