@@ -56,7 +56,7 @@ main {
   flex-direction: column;
   align-items: center;
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
   max-width: 100vw;
   gap: 10px;
 }
@@ -176,8 +176,8 @@ dialog > form > button {
   position: absolute;
   cursor: pointer;
   z-index: 99999;
-  left: 200px;
-  top: -165px;
+  left: 100px;
+  top: -135px;
 }
 dialog > form > button:hover {
   opacity: 70%;
