@@ -5,9 +5,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 10px;
 }
 .book_data > img {
-  border-radius: 16px 16px 0 0;
+  border-radius: 16px;
 }
 .book_data > table {
   background-color: var(--eerie_black);
