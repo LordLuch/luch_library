@@ -64,7 +64,7 @@
   .book_data > table {
     background-color: var(--eerie_black);
     border-radius: 0 16px 16px 0;
-    height: 100%;
+    height: auto;
     width: 120px;
   }
   .book_main {
