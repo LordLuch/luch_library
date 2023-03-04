@@ -12,7 +12,7 @@
 .book_data > table {
   background-color: var(--eerie_black);
   border-radius: 16px;
-  height: 100%;
+  height: auto;
   width: 120px;
 }
 .book_data > table {
