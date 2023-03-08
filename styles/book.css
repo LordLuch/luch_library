@@ -5,14 +5,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 10px;
 }
 .book_data > img {
-  border-radius: 16px 16px 0 0;
+  border-radius: 16px;
 }
 .book_data > table {
   background-color: var(--eerie_black);
   border-radius: 16px;
-  height: 100%;
+  height: auto;
   width: 120px;
 }
 .book_data > table {
@@ -57,6 +58,7 @@
     flex-direction: row;
     justify-content: normal;
     align-items: normal;
+    gap: 0;
   }
   .book_data > img {
     border-radius: 16px 0 0 16px;
@@ -64,7 +66,6 @@
   .book_data > table {
     background-color: var(--eerie_black);
     border-radius: 0 16px 16px 0;
-    height: 100%;
     width: 120px;
   }
   .book_main {
